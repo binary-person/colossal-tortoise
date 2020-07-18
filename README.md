@@ -56,7 +56,7 @@ onmessage=function(event){ // event.data is the thread number, from 1 to N where
 Go to the Colossal Tortoise server page and click on a jobid. There should be a link that says "API endpoint for worker results". Alternatively, you could go to https://COLOSSAL_TORTOISE_URL/workerresults/jobid_here
 
 To know when a job is finished, you could enter in a webhook URL (during job creation/edit) or you could poll the API endpoint for worker results. The following is the JSON format for worker results:
-```json
+```
 {
     "1": {
         "finished": true|false,
