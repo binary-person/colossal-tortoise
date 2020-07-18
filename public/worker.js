@@ -65,7 +65,12 @@
                             notice_iframe.style.height = notice_iframe.contentDocument.documentElement.scrollHeight + 'px';
                         };
                     }else{ // fix for iOS 13 safari's weird issues
-                        setTimeout(()=>notice_iframe.style.height = notice_iframe.contentDocument.documentElement.scrollHeight + 'px', 100);
+                        let interval = setInterval(()=>{
+                            if(notice_iframe.contentDocument.documentElement.scrollHeight > 300){
+                                notice_iframe.style.height = notice_iframe.contentDocument.documentElement.scrollHeight + 'px';
+                                clearInterval(interval);
+                            }
+                        }, 100);
                     }
                     let close_frame = ()=>{
                         notice_iframe.style.height = '200px';
