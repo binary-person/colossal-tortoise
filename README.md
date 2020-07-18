@@ -6,7 +6,7 @@ Table of contents
 - [Live Application](#live-application)
 - [Introduction](#introduction)
 - [Why Colossal Tortoise?](#why-colossal-tortoise)
-- [Can I opt out of loaning my device's computing power?](#can-i-opt-out-of-loaning-my-device's-computing-power)
+- [Can I opt out of loaning my device's computing power?](#can-i-opt-out-of-loaning-my-devices-computing-power)
 - [Why the name Colossal Tortoise?](#why-the-name-colossal-tortoise)
 - [Any finicky libraries that Colossal Toroise use?](#any-finicky-libraries-that-colossal-tortoise-use)
 - [Usage](#usage)
