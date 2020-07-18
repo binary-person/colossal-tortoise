@@ -65,7 +65,7 @@ To know when a job is finished, you could enter in a webhook URL (during job cre
     "thread_number": {...},....
 }
 ```
-Note that jobs that hasn't started yet will not appear in the worker result as `http_response[threadnumber].finished === false`. The `http_response[threadnumber]` object will not exist if the job hasn't started yet. This is to keep track if the workers that are joining up to process the job needs to work on new threads or work on threads by slow workers.
+Note that threads which haven't started yet will not appear in the worker result as `worker_result[threadnumber].finished === false` nor will the object `worker_result[threadnumber]` exist. This is to keep track if the workers that are joining up to process the job needs to work on new threads or work on threads by slow workers.
 
 ### Creating a job
 Simply go to the Colossal Tortoise server page and click on "Create/Edit Job". From there, you can upload your workerjs script.
