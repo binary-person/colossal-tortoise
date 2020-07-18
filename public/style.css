@@ -42,6 +42,7 @@ input[type="file"] {
     opacity: 0;
     max-width: 80%;
     overflow-wrap: break-word;
+    margin-bottom: 10px;
 }
 
 #splash-wrapper {
