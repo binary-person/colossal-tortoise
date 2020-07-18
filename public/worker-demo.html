@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Worker Demo</title>
+    <style>
+        h2, p, span {
+            font-family: sans-serif;
+        }
+        #reset-btn, a {
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(76, 137, 187);
+        }
+    </style>
+    <script data-consolejs-channel="colossal-tortoise" src="https://remotejs.com/agent/agent.js"></script>
+    <script src="/worker.js"></script> <!-- <== this script tag! :D -->
+</head>
+<body>
+    <h2>Sample content</h2>
+    <p>This is used to demostrate the seamless integration of the Colossal Tortoise worker script tag (press Ctrl+U to see the script tag) and the simplicity for webmasters to support jobs that require heavy computing created by scientists and researchers using Colossal Tortoise.</p>
+    <p>*Insert news and articles or anything on a webpage*</p>
+    <span>Click <span id="reset-btn" onclick="window.localStorage.clear();window.alert('Done. Now, refresh to see the consent popup')">this</span> to reset the weekly timer implemented by the script tag.</span><br><span>If you cannot see the consent popup, see <a target="_blank" href="https://github.com/scheng123/colossal-tortoise#creating-a-workerjs-script">this</a> for an example on creating a test job.</span>
+</body>
+</html>

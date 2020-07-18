@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <script src="/index.js"></script>
+    <script>
+        if(window.location.protocol !== 'https:'){
+            window.location.protocol = 'https:';
+        }
+    </script>
+
+    <title>Colossal Tortoise</title>
+</head>
+<body>
+    <div id="splash-wrapper">
+        <img src="/logo.png" onload="this.parentNode.style.opacity=1;setTimeout(()=>this.parentNode.style.transition='1s',300)"/>
+    </div>
+    <div id="top-bar">
+        <div id="top-bar-intro-wrapper">
+            <p id="top-bar-title">Colossal Tortoise</p>
+            <p id="top-bar-description">The browser supercomputer. <a href="https://github.com/scheng123/colossal-tortoise">More info</a></p>
+        </div>
+        <span>Total jobs: </span><span id="total-jobs">0</span>
+        <span>Total workers: </span><span id="total-workers">0</span>
+        <span>Total cores: </span><span id="total-cores">0</span>
+        <p id="top-bar-btn">Create/Edit Job</p>
+    </div>
+    <div id="table-padding">
+        <table>
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Job description</th>
+                    <th>Number of workers online</th>
+                    <th>Number of cores</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="createjob-grayer" class="grayed-out-slide"></div>
+    <div id="createjob-slide" class="slide-template">
+        <p>Job Description:</p>
+        <textarea id="createjob-description">My awesome evolution simulation</textarea>
+        <p>Worker js code file (more info <a target="_blank" href="https://github.com/scheng123/colossal-tortoise#creating-a-workerjs-script">here</a>):</p>
+        <span id="createjob-workerjs-filename">No file selected</span>
+        <label class="file-upload-styling">
+            <input id="createjob-workerjs-file" type="file"/>
+            <span>Upload</span>
+        </label>
+        <p>Number of threads required to finish this job</p>
+        <p>(a number more than the total core count for this job will create pending jobs for the worker cores):</p>
+        <input id="createjob-thread-amount" type="number" placeholder="10"/>
+        <p>Webhook endpoint for completion event (optional):</p>
+        <input id="createjob-completion-webhook" type="text" placeholder="https://example.com/"/>
+        <p>Edit existing jobid (optional):</p>
+        <input id="createjob-edit-jobid" type="text" placeholder="jobid"/>
+        <p>Password (for making changes to the worker js file)</p>
+        <p>Enter your existing password here to make changes if you provided a jobid:</p>
+        <input id="createjob-password" type="password" placeholder="something you can share"/>
+        <p id="createjob-btn">Create Job</p>
+        <p id="createjob-creating" class="createjob-friendly-msg">Creating job</p>
+        <p id="createjob-error" class="createjob-friendly-msg">Check your fields</p>
+        <p id="createjob-connection-error" class="createjob-friendly-msg">Unknown error occurred</p>
+    </div>
+</body>
+</html>

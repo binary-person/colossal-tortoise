@@ -1,0 +1,186 @@
+body, textarea {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a, a:visited, a:active, .clickable-jobid {
+    color: rgb(30, 116, 148);
+    text-decoration: none;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none !important;
+}
+.file-upload-styling {
+    border: rgb(74, 156, 187) 2px solid;
+    border-radius: 6px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.grayed-out-slide {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
+}
+.slide-template {
+    position: absolute;
+    padding: 40px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: none;
+    opacity: 0;
+    max-width: 80%;
+    overflow-wrap: break-word;
+}
+
+#splash-wrapper {
+    transition: 0.3s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    opacity: 0;
+}
+#splash-wrapper img {
+    height: inherit;
+}
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    left: 100px;
+    right: 0;
+    background-color: white;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#top-bar span {
+    font-size: 1.2em;
+}
+#top-bar span:nth-child(odd) {
+    margin-left: 5px;
+}
+#top-bar span:nth-child(even) {
+    margin-left: 25px;
+}
+#top-bar-title {
+    font-weight: 400;
+    font-size: 2.5em;
+    margin: 0;
+}
+#top-bar-description {
+    font-weight: 300;
+    margin: 0;
+}
+#top-bar-btn {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 50px;
+    border: rgb(185, 229, 236) 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(74, 156, 187);
+    transition: 0.2s;
+    cursor: pointer;
+}
+#top-bar-btn:hover {
+    background-color: rgb(74, 156, 187);
+    color: white;
+}
+
+
+#table-padding {
+    padding: 20px;
+}
+table {
+    transition: 0.2s;
+    opacity: 0;
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+thead {
+    border-bottom: rgb(185, 229, 236) 3px solid
+}
+th {
+    font-weight: 400;
+    font-size: 1.25em;
+}
+th, td {
+    padding: 10px 10px 10px 0px;
+}
+tbody tr:nth-child(odd) {
+    background-color: aliceblue;
+}
+tbody tr:nth-child(even) {
+    background-color: beige;
+}
+
+#createjob-slide p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+#createjob-slide input, #createjob-description {
+    display: block;
+    margin-bottom: 20px;
+    width: 30em;
+}
+#createjob-description {
+    height: calc(1.5em * 4);
+    font-size: 1em;
+}
+#createjob-workerjs-file {
+    font-size: 1.2em;
+}
+#createjob-btn {
+    color: rgb(74, 156, 187);
+    user-select: none;
+    cursor: pointer;
+    width: fit-content;
+}
+.createjob-friendly-msg {
+    user-select: none;
+    cursor: default;
+    font-size: 0.8em;
+    width: fit-content;
+    display: none;
+}
+
+.jobinfo-title {
+    font-size: 1.5em !important;
+    margin-bottom: 20px !important;
+}
+.jobinfo-subtitle {
+    margin-bottom: 20px !important;
+}
+.jobinfo-slide p {
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.jobinfo-slide textarea {
+    width: 435px;
+    height: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "colossal-tortoise",
+  "version": "1.0.0",
+  "description": "A browser supercomputer. Many user browsers all working together to compute a solution.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "multithreading",
+    "nodejs",
+    "websockets",
+    "supercomputer",
+    "supercomputing"
+  ],
+  "author": "Simon Cheng",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "md5": "^2.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}
